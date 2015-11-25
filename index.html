@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+
+    <title>PiggyApp v1</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/aplicacion.css">
+
+    <link rel="icon" href="img/icon.png">
+
+  </head>
+
+  <body class="theme-deeppurple">
+    
+    <!-- ================ PANELES ================== >
+
+    <!-- Primero, el overlay -->
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    
+    <div class="panel panel-left panel-cover">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div data-page="panel-left" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Menú</div>
+              </div>
+            </div>
+            <div class="page-content">
+                 
+                    <div class="list-block media-list">
+                      <ul>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><img src="img/128.jpg" width="44"/></div>
+                            <div class="item-inner">
+                              <div class="item-title-row">
+                                <div class="item-title">Luis Lopez</div>
+                              </div>
+                              <div class="item-subtitle"> Disponible: <span class="color-green"> S/.400 </span> </div>
+                            </div>
+                          </div>
+                        </li>
+                       
+                         
+                        </ul>
+                      </div>
+
+              <div class="list-block">
+                <ul>
+                 
+                      
+                        
+
+
+
+                          <li><a href="micuenta.html" class="item-link close-panel">
+                          <div class="item-content">
+
+                            <div class="item-inner">
+                              <div class="item-title">Mi cuenta</div>
+                            </div>
+
+
+                          </div></a></li>
+                         
+
+                          <li><a href="configuracion.html" class="item-link close-panel">
+                          <div class="item-content">
+
+                            <div class="item-inner">
+                              <div class="item-title">Configuración</div>
+                            </div>
+
+
+                          </div></a></li>
+
+                       
+                         <li><a href="acercade.html" class="item-link close-panel">
+                        <div class="item-content">
+
+                          <div class="item-inner">
+                            <div class="item-title">Acerca de</div>
+                          </div>
+                        </div></a></li>
+
+                 
+                </ul>
+              </div> <!-- fin .list-block-->
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+     
+    <!-- ================ VISTAS ================== >
+
+    <!-- Views -->
+    <div class="views">
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">PiggyApp</div>
+                 <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+              </div>
+            </div>
+                <a id="boton-plus" href="agregar_gasto.html" class="floating-button color-orange"><i class="icon icon-plus"></i></a>
+             <!-- Start Tabs -->
+            <div class="toolbar tabbar">
+              <div class="toolbar-inner"><a href="#tab1" class="active tab-link">GASTOS </a><a href="#tab2" class="tab-link">INGRESOS</a><a href="#tab3" class="tab-link">METAS</a></div>
+            </div>
+            <div class="tabs-animated-wrap">
+              <div class="tabs">
+                <div id="tab1" class="page-content tab active">
+                  <div class="content-block">
+                    <p>This is tab 1 content</p>
+                     
+                      <div class="content-block-title">Hoy</div>
+                      <div class="list-block">
+                        <ul>
+                          <li><a href="#" class="item-link item-content">
+                            <div class="item-media"><span class="badge">5m</span></div>
+                            <div class="item-inner"> 
+                              <div class="item-title">Cine</div>
+                              <div class="item-after "><span class="color-red">-S/.50</span></div>
+                            </div></a></li>
+                            <li><a href="#" class="item-link item-content">
+                              <div class="item-media"><span class="badge">5h</span></div>
+                              <div class="item-inner"> 
+                                <div class="item-title">Almuerzo</div>
+                                <div class="item-after"><span class="color-red"> -S./14</span></div>
+                              </div></a></li>
+                              <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">7h</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Transporte</div>
+                                   <div class="item-after "><span class="color-red">-S/.10</span></div>
+                                </div></a></li>
+                              </ul>
+                            </div>
+
+
+                      <div class="content-block-title">Ayer</div>
+                      <div class="list-block">
+                        <ul>
+                          <li><a href="#" class="item-link item-content">
+                            <div class="item-media"><span class="badge">10h</span></div>
+                            <div class="item-inner"> 
+                              <div class="item-title">Cine</div>
+                              <div class="item-after "><span class="color-red">-S/.50</span></div>
+                            </div></a></li>
+                            <li><a href="#" class="item-link item-content">
+                              <div class="item-media"><span class="badge">15h</span></div>
+                              <div class="item-inner"> 
+                                <div class="item-title">Almuerzo</div>
+                                <div class="item-after"> <span class="color-red">-S./14</span></div>
+                              </div></a></li>
+                              <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">18h</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Transporte</div>
+                                   <div class="item-after "><span class="color-red">-S/.10</span></div>
+                                </div></a></li>
+
+                                 <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">20h</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Impresiones</div>
+                                   <div class="item-after "><span class="color-red">-S/.5</span></div>
+                                </div></a></li>
+
+                              </ul>
+                            </div>
+
+                       <div class="content-block-title">En la semana</div>
+                      <div class="list-block">
+                        <ul>
+                          <li><a href="#" class="item-link item-content">
+                            <div class="item-media"><span class="badge">23/11</span></div>
+                            <div class="item-inner"> 
+                              <div class="item-title">Compra de vino</div>
+                              <div class="item-after "><span class="color-red">-S/.100</span></div>
+                            </div></a></li>
+                            <li><a href="#" class="item-link item-content">
+                              <div class="item-media"><span class="badge">23/11</span></div>
+                              <div class="item-inner"> 
+                                <div class="item-title">Almuerzo</div>
+                                <div class="item-after"> <span class="color-red">-S./14</span></div>
+                              </div></a></li>
+                              <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">23/11</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Transporte</div>
+                                   <div class="item-after "><span class="color-red">-S/.10</span></div>
+                                </div></a></li>
+
+                                <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">22/11</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Paneton</div>
+                                   <div class="item-after "><span class="color-red">-S/.24</span></div>
+                                </div></a></li>
+                              </ul>
+                            </div>
+
+                       
+                            <p class="buttons-row">
+                              <a href="#" class="button ripple-blue">Ver más</a>
+                          
+                            </p>
+
+                  </div>
+                </div>
+
+            
+
+                <div id="tab2" class="page-content tab">
+                  <div class="content-block">
+                    <p>This is tab 2 content</p>
+                   
+                   <div class="content-block-title">Hoy</div>
+                      <div class="list-block">
+                        <ul>
+                          
+                            <li><a href="#" class="item-link item-content">
+                              <div class="item-media"><span class="badge">5h</span></div>
+                              <div class="item-inner"> 
+                                <div class="item-title">Devolucion deuda</div>
+                                <div class="item-after"><span class="color-green"> +S./100</span></div>
+                              </div></a></li>
+                              <li><a href="#" class="item-link item-content">
+                                <div class="item-media"><span class="badge">7h</span></div>
+                                <div class="item-inner"> 
+                                  <div class="item-title">Pago</div>
+                                   <div class="item-after "><span class="color-green">+S/.800</span></div>
+                                </div></a></li>
+                              </ul>
+                            </div>
+
+
+                      <div class="content-block-title">Ayer</div>
+                      <div class="list-block">
+                         <div class="content-block">
+                          <p>No hubo ningun ingreso</p>
+                        </div>                              
+                      </div>
+
+                       <div class="content-block-title">En el resto de la semana</div>
+                      <div class="list-block">
+                         <div class="content-block">
+                          <p>No hubo ningun ingreso</p>
+                        </div>                              
+                      </div>
+                       
+                        <p class="buttons-row">
+                              <a href="#" class="button ripple-blue">Ver más</a>
+                          
+                            </p>
+
+
+                  </div>
+                </div>
+
+             
+               
+                <div id="tab3" class="page-content tab">
+
+                  <div class="content-block">
+                    <p>This is tab 3 content</p>
+                    
+                      <div class="content-block-title">Tus metas</div>
+                      <div class="content-block" >Cada meta es importante, aquí tienes el listado de ellas.</div>
+
+                      <div class="list-block">
+                        <ul>
+
+                            <li>
+                            <div class="item-content">
+                             
+                              <div class="item-inner"> 
+                                <div class="item-title">Nike - Zapatilla </div>
+                                <div class="item-after">Precio: S/.220</div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <div class="item-content">
+                            
+                              <div class="item-inner"> 
+                                <div class="item-title">Nuevo smartphone</div>
+                                <div class="item-after">Precio: S/.800</div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="item-content">
+                          
+                              <div class="item-inner"> 
+                                <div class="item-title">Viaje a Cuzco</div>
+                                <div class="item-after">Precio: S/.400</div>
+                              </div>
+                            </div>
+                          </li>
+                        
+                        </ul>
+                      </div>
+
+
+                       <div class="content-block-title">Metas cercanas</div>
+                    
+
+                      <div class="list-block">
+                        <ul>
+
+                            <li>
+                            <div class="item-content">
+                             
+                              <div class="item-inner"> 
+                                <div class="item-title"><b>Nike - Zapatilla</b> </div>
+                                <div class="item-after">Te falta S/.20</div>
+                              </div>
+                            </div>
+                          </li>
+
+                        
+                        
+                        </ul>
+                      </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div> <!-- fin tabs -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- ================ LIBRERIAS JS ================== >
+
+    <!-- Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"> </script>
+    
+    <!-- JSs-->
+    <script type="text/javascript" src="js/app-start.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+   
+
+  </body>
+</html> 
